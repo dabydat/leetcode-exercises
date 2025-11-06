@@ -1,10 +1,10 @@
-type Counter = {
+type CounterType = {
     increment: () => number,
     decrement: () => number,
     reset: () => number,
 }
 
-function createCounter(init: number): Counter {
+function createCounter(init: number): CounterType {
     let currentValue: number = init;
     return {
         increment: () => Number(currentValue += 1),
@@ -12,6 +12,7 @@ function createCounter(init: number): Counter {
         reset: () => Number(currentValue = init)
     }
 };
+
 
 /**
  * const counter = createCounter(5)
